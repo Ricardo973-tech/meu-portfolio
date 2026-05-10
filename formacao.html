@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Ricardo Rivella | Formação</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação - Meu Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav class="menu">
-            <a href="index.html">Sobre Mim</a>
-            <a href="formacao.html" class="active">Formação</a>
-            <a href="portfolio.html">Portfólio</a>
+            <a href="index.html">Início</a>
+            <a href="formacao.html" class="ativo">Formação</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
-    <main class="conteudo">
-        <section class="cartao-perfil">
-            <h1>Formação Acadêmica</h1>
-            <p><strong>Bacharelado em Ciência da Computação</strong> - UNINTER (2025 - Cursando)</p>
-            <p><strong>Desenvolvimento Web Front-End</strong> - Udemy/Alura (2025)</p>
-        </section>
+
+    <main class="conteúdo">
+        <div class="cartao-perfil">
+            <h1>Minha Formação</h1>
+            <p>Confira abaixo minha trajetória acadêmica e cursos realizados:</p>
+            
+            <div style="text-align: left; margin-top: 20px;">
+                <h3 style="color: #2c3e50;">🎓 Graduação</h3>
+                <p><strong>Nome do Curso</strong><br>
+                Instituição de Ensino | 2021 - 2025</p>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+                <h3 style="color: #2c3e50;">📜 Cursos Complementares</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">✅ Desenvolvimento Web Estático (GitHub Pages)</li>
+                    <li style="margin-bottom: 10px;">✅ Design Responsivo com CSS</li>
+                    <li style="margin-bottom: 10px;">✅ Lógica de Programação</li>
+                </ul>
+            </div>
+
+            <button onclick="window.location.href='index.html'" style="margin-top: 20px; width: 100%;">Voltar ao Início</button>
+        </div>
     </main>
-    <footer><p>&copy; 2025 Ricardo Rivella</p></footer>
+
+    <footer>
+        <p>&copy; 2024 - Criado por mim</p>
+    </footer>
+
 </body>
 </html>
+
 
