@@ -8,212 +8,105 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* Configurações Gerais */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Cinza claro de fundo */
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+/* Menu de Navegação */
 header {
-    background-color: #2c3e50;
-    padding: 1rem;
+    background-color: #2c3e50; /* Azul escuro profissional */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.menu {
     text-align: center;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #3498db; /* Azul claro ao passar o mouse */
 }
 
 .menu a.active {
     border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
 }
 
+/* Container de Conteúdo */
 .conteudo {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
+/* Estilo do Cartão de Perfil/Conteúdo */
 .cartao-perfil {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 600px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Estilo do Rodapé */
 footer {
     text-align: center;
     padding: 20px;
-    background: #ddd;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #f8f9fa;
+    color: #666;
+    font-size: 13px;
+    margin-top: 50px;
 }
 
+/* Estilo do Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-/* ==========================================
-   ELEMENTOS DA PÁGINA DE FORMAÇÃO
-   ========================================== */
-.item-cronograma {
-    background-color: #ffffff;
-    padding: 20px;
-    border-left: 5px solid #3498db;
-    border-radius: 0 8px 8px 0;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.item-cronograma .ano {
-    font-weight: bold;
-    color: #3498db;
-    font-size: 0.9rem;
-}
-
-.item-cronograma h3 {
-    color: #2c3e50;
-    margin: 5px 0;
-}
-
-.item-cronograma .instituicao {
-    font-style: italic;
-    color: #7f8c8d;
-    margin-bottom: 10px;
-}
-
-/* ==========================================
-   ELEMENTOS DA PÁGINA DE PORTFÓLIO
-   ========================================== */
-.grade-portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.card-projeto {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 4px solid #1abc9c;
-}
-
-.card-projeto h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.card-projeto p {
-    font-size: 0.95rem;
-    color: #555555;
+input, textarea {
     margin-bottom: 15px;
-}
-
-.tag {
-    display: inline-block;
-    background-color: #ecf0f1;
-    color: #7f8c8d;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-right: 5px;
-}
-
-/* ==========================================
-   FORMULÁRIO DE CONTATO E INTERAÇÕES
-   ========================================== */
-.container-contato {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.formulario {
-    margin-top: 20px;
-}
-
-.grupo-campo {
-    margin-bottom: 20px;
-}
-
-.grupo-campo label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-.grupo-campo input, .grupo-campo textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #bdc3c7;
-    border-radius: 4px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.grupo-campo input:focus, .grupo-campo textarea:focus {
-    border-color: #3498db;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: #2c3e50;
+    color: white;
     border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #2980b9;
-}
-
-/* Classes manipuladas estritamente pelo JavaScript */
-.feedback-oculto {
-    display: none;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.feedback-sucesso {
-    display: block !important;
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.feedback-erro {
-    display: block !important;
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-/* ==========================================
-   RODAPÉ (FOOTER)
-   ========================================== */
-footer {
-    background-color: #1a252f;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-    font-size: 0.9rem;
+    background-color: #34495e;
 }
