@@ -3,49 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formação - Meu Site</title>
+    <title>Formação - Ricardo Rivella da Costa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav class="menu">
-            <a href="index.html">Início</a>
-            <a href="formacao.html" class="ativo">Formação</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
+    <!-- Menu de Navegação (Mantenha o padrão das outras páginas) -->
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html" class="active">Formação</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-    <main class="conteúdo">
-        <div class="cartao-perfil">
+    <main class="container">
+        <section id="formacao-academica">
             <h1>Minha Formação</h1>
-            <p>Confira abaixo minha trajetória acadêmica e cursos realizados:</p>
-            
-            <div style="text-align: left; margin-top: 20px;">
-                <h3 style="color: #2c3e50;">🎓 Graduação</h3>
-                <p><strong>Nome do Curso</strong><br>
-                Instituição de Ensino | 2021 - 2025</p>
 
-                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+            <!-- Bloco de Educação -->
+            <article class="item-formacao">
+                <h3>Educação Superior</h3>
+                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+                <p><strong>Instituição:</strong> Universidade Internacional Uninter</p>
+                <p><strong>Status:</strong> Cursando (Previsão de conclusão: 2028)</p>
+            </article>
 
-                <h3 style="color: #2c3e50;">📜 Cursos Complementares</h3>
-                <ul style="list-style-type: none; padding: 0;">
-                    <li style="margin-bottom: 10px;">✅ Desenvolvimento Web Estático (GitHub Pages)</li>
-                    <li style="margin-bottom: 10px;">✅ Design Responsivo com CSS</li>
-                    <li style="margin-bottom: 10px;">✅ Lógica de Programação</li>
+            <hr> <!-- Linha divisória para organizar visualmente -->
+
+            <!-- Bloco de Cursos Complementares -->
+            <article class="item-formacao">
+                <h3>Cursos Complementares</h3>
+                <ul>
+                    <li>Fundamentos de Programação Web - Universidade internacional Uninter</li>
+                    <li>Lógica de Programação com JavaScript - Universidade Internacional Uninter</li>
+                    <li>Design Responsivo com CSS3 - Universidade Internacional Uninter</li>
+                    <li>Front End - Universidade Internacional Uninter</li>
                 </ul>
-            </div>
+            </article>
 
-            <button onclick="window.location.href='index.html'" style="margin-top: 20px; width: 100%;">Voltar ao Início</button>
-        </div>
+            <hr>
+
+            <!-- Bloco de Idiomas -->
+            <article class="item-formacao">
+                <h3>Idiomas</h3>
+                <ul>
+                    <li><strong>Português:</strong> Nativo</li>
+                    <li><strong>Inglês:</strong> Básico / Intermediário</li>
+                </ul>
+            </article>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 - Criado por mim</p>
-    </footer>
+    <!-- JavaScript para interação simples (Exemplo: Alternar Tema ou Efeito Visual) -->
+    <script>
+        // Comentário: Script simples para destacar o item da lista ao passar o mouse
+        const itens = document.querySelectorAll('li');
+        
+        itens.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.fontWeight = 'bold';
+                item.style.color = '#4A90E2'; // Altere para sua cor de preferência
+            });
+            
+            item.addEventListener('mouseout', () => {
+                item.style.fontWeight = 'normal';
+                item.style.color = ''; // Volta ao padrão do CSS
+            });
+        });
+    </script>
 
 </body>
 </html>
-
 
 
