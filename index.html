@@ -3,64 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Seu Nome Completo</title>
+    <title>Sobre Mim - Ricardo Rivella da Costa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Menu de Navegação Fixo -->
-    <header>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><button id="theme-toggle">Alternar Tema</button></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Menu de Navegação - Padrão para todas as páginas -->
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html" class="active">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <!-- Seção Sobre Mim -->
-        <section id="sobre">
-            <h1>Sobre Mim</h1>
-            <p>Olá! Meu nome é [Seu Nome]. Sou apaixonado por tecnologia e hobbies como [Seu Hobby].</p>
-            <!-- Adicione mais parágrafos aqui -->
-        </section>
-
-        <!-- Seção Formação -->
-        <section id="formacao">
-            <h2>Formação Acadêmica</h2>
-            <ul>
-                <li><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas (Exemplo)</li>
-                <li><strong>Idiomas:</strong> Inglês Intermediário</li>
-            </ul>
-        </section>
-
-        <!-- Seção Portfólio -->
-        <section id="portfolio">
-            <h2>Meus Projetos</h2>
-            <div class="projeto-card">
-                <h3>Projeto 1</h3>
-                <p>Descrição breve do que você já fez.</p>
-                <a href="https://github.com" target="_blank">Ver no GitHub</a>
+    <main class="container">
+        <!-- Seção Principal de Apresentação -->
+        <section id="sobre-mim">
+            <div class="perfil-header">
+                <h1>Olá, eu sou o Ricardo Rivella da Costa</h1>
+                <p class="tagline">Estudante de Ciência da Computação</p>
             </div>
-        </section>
 
-        <!-- Seção Contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <form id="contact-form">
-                <input type="text" id="nome" placeholder="Seu Nome" required>
-                <input type="email" id="email" placeholder="Seu E-mail" required>
-                <textarea id="mensagem" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="form-feedback"></div>
+            <article class="biografia">
+                <h2>Um pouco sobre mim</h2>
+                <p>
+                    Tenho 53 anos e atualmente moro em São Vicente. 
+                    Minha jornada na tecnologia começou quando comecei trabalhar como Técnico de Informática na Universidade Fundação Lusíada, o interesse em me aprofundar na profissão foi a minha maior motivação.
+                </p>
+                <p>
+                    Estou focando meus estudos no desenvolvimento Web, aprendendo as bases de HTML, Front End, CSS e JavaScript para criar interfaces funcionais e amigáveis.
+                </p>
+            </article>
+
+            <article class="hobbies">
+                <h2>Meus Hobbies</h2>
+                <p>Quando não estou estudando programação, eu gosto de:</p>
+                <ul>
+                    <li>Adoro ir ao Cinema</li>
+                    <li>Adoro ler um bom livro</li>
+                    <li>Adoro Jogar videogame]</li>
+                </ul>
+            </article>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Rodapé Simples -->
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por Ricardo Rivella da Costa</p>
+    </footer>
+
+    <!-- JavaScript para funcionalidade extra (Alternar modo escuro) -->
+    <script>
+        // Função simples para dar boas-vindas no console e mostrar interação
+        console.log("Bem-vindo ao meu portfólio pessoal!");
+
+        // Exemplo de interação: Mudar a cor de fundo do cabeçalho ao clicar no título
+        const titulo = document.querySelector('h1');
+        titulo.addEventListener('click', () => {
+            titulo.style.color = '#e74c3c'; // Muda para vermelho ao clicar
+            alert("Você descobriu uma interação!");
+        });
+    </script>
+
 </body>
 </html>
