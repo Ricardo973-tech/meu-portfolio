@@ -1,27 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Ricardo Rivella | Portfólio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Ricardo Rivella da Costa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <a href="index.html">Sobre Mim</a>
-            <a href="formacao.html">Formação</a>
-            <a href="portfolio.html" class="active">Portfólio</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
-    <main class="conteudo">
-        <section class="cartao-perfil">
-            <h1>Portfólio</h1>
-            <p>Confira meus projetos no GitHub:</p>
-            <a href="https://github.com" target="_blank">Ver Repositórios</a>
+
+    <!-- Menu de Navegação - Padrão -->
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portfolio.html" class="active">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="meus-projetos">
+            <h1>Trabalhos Realizados</h1>
+            <p>Confira abaixo alguns dos projetos que desenvolvi durante meus estudos:</p>
+
+            <div class="grade-portfolio">
+                <!-- Projeto 1: Este Portfólio -->
+                <article class="card-projeto">
+                    <h3>Projeto 01: Portfólio Pessoal</h3>
+                    <p>Site desenvolvido como atividade prática para a disciplina de Fundamentos de Programação Web.</p>
+                    <p><strong>Tecnologias:</strong> HTML5, CSS3 e JavaScript Puro.</p>
+                    <a href="https://github.comRicardo973-patch-técnico-1" target="_blank" class="btn-projeto">Ver no GitHub</a>
+                </article>
+
+                <!-- Projeto 2: Exercicio de Lógica -->
+                <article class="card-projeto">
+                    <h3>Projeto 02: Validadores de Formulário</h3>
+                    <p>Exercício focado em lógica de programação e manipulação do DOM com JavaScript.</p>
+                    <p><strong>Tecnologias:</strong> JavaScript e HTML.</p>
+                    <a href="#" class="btn-projeto">Link do Repositório</a>
+                </article>
+            </div>
         </section>
     </main>
-    <footer><p>&copy; 2025 Ricardo Rivella</p></footer>
+
+    <!-- JavaScript para Interação -->
+    <script>
+        // Interação simples: Alerta ao clicar em um projeto que ainda não tem link
+        const linksLinks = document.querySelectorAll('.btn-projeto');
+        
+        linksLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href') === "#") {
+                    e.preventDefault();
+                    alert("Este projeto será enviado em breve!");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
-
