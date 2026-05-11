@@ -1,5 +1,5 @@
 /**
- * Script de gerenciamento de comportamento dinâmico do portfólio.
+ * Script de gerenciamento de comportamento dinâmico do portfolio.
  * Concentra a escuta de eventos e validações nativas em JavaScript Vanilla (sem frameworks).
  */
 document.addEventListener("DOMContentLoaded", function() {
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
             evento.preventDefault();
 
             // Captura e remove espaços extras nas pontas dos inputs
-            const valorNome = document.getElementById("nome").value.trim();
-            const valorEmail = document.getElementById("email").value.trim();
-            const valorMensagem = document.getElementById("mensagem").value.trim();
+            const valorNome = document.getElementById("Ricardo Rivella da Costa").value.trim();
+            const valorEmail = document.getElementById("ricardorivella1@mail.com").value.trim();
+            const valorMensagem = document.getElementById("Se Deus é por nós, quem será contra nós").value.trim();
 
             // Limpa as classes de validações anteriores antes de rodar o novo teste
             containerFeedback.className = "feedback-oculto";
