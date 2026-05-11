@@ -3,36 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site no GitHub</title>
+    <title>Portfólio | Seu Nome Completo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Menu de Navegação Fixo -->
     <header>
-        <nav class="menu">
-            <a href="#" class="ativo">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button id="theme-toggle">Alternar Tema</button></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="conteúdo">
-        <div class="cartao-perfil">
-            <h1>Bem-vindo ao meu site</h1>
-            <p>Este site está sendo hospedado pelo GitHub Pages!</p>
-            
-            <form>
-                <input type="text" placeholder="Seu nome">
-                <textarea placeholder="Sua mensagem"></textarea>
+    <main>
+        <!-- Seção Sobre Mim -->
+        <section id="sobre">
+            <h1>Sobre Mim</h1>
+            <p>Olá! Meu nome é [Seu Nome]. Sou apaixonado por tecnologia e hobbies como [Seu Hobby].</p>
+            <!-- Adicione mais parágrafos aqui -->
+        </section>
+
+        <!-- Seção Formação -->
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <ul>
+                <li><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas (Exemplo)</li>
+                <li><strong>Idiomas:</strong> Inglês Intermediário</li>
+            </ul>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section id="portfolio">
+            <h2>Meus Projetos</h2>
+            <div class="projeto-card">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do que você já fez.</p>
+                <a href="https://github.com" target="_blank">Ver no GitHub</a>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" placeholder="Sua Mensagem" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
-        </div>
+            <div id="form-feedback"></div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 - Criado por mim</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
