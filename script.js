@@ -1,37 +1,27 @@
-// Função para validar o formulário de contato
-function validarFormulario(event) {
-    event.preventDefault(); // Impede o envio real do formulário
+// 1. Validação e Simulação de Envio do Formulário
+const contactForm = document.getElementById('contact-form');
+const feedback = document.getElementById('form-feedback');
 
-    // Capturando os campos
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o recarregamento da página
+
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const mensagem = document.getElementById('mensagem').value;
 
-    // Validação simples: verifica se estão vazios
-    if (nome === "" || email === "" || mensagem === "") {
-        alert("Por favor, preencha todos os campos.");
-        return;
+    // Validação Simples
+    if (nome && email.includes('@') && mensagem) {
+        alert("Mensagem enviada com sucesso!");
+        feedback.innerHTML = `<p style="color: green;">Obrigado, ${nome}! Entraremos em contato.</p>`;
+        contactForm.reset(); // Limpa os campos
+    } else {
+        feedback.innerHTML = `<p style="color: red;">Por favor, preencha os campos corretamente.</p>`;
     }
+});
 
-    // Validação de formato de e-mail usando RegEx
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Por favor, insira um e-mail válido.");
-        return;
-    }
-
-    // Simulação de envio (conforme requisito 5)
-    alert("Mensagem enviada com sucesso! (Simulação)");
-    
-    // Limpa o formulário
-    document.getElementById('formContato').reset();
-}
-
-// Adiciona o evento ao formulário quando a página carregar
-window.onload = function() {
-    const form = document.getElementById('formContato');
-    if (form) {
-        form.addEventListener('submit', validarFormulario);
-    }
-};
+// 2. Alternar Tema Claro/Escuro
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
 
